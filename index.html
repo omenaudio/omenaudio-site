@@ -11,37 +11,36 @@
       color: #fff;
       font-family: Arial, sans-serif;
       overflow: hidden;
-    }
-    .content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      opacity: 0;
-      animation: fadeIn 4s ease-in forwards;
+      text-align: center;
     }
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    img {
+    .logo {
       width: 25%;
       height: auto;
-      display: block;
-      margin: 0 auto;
+      animation: fadeInLogo 4s ease-in forwards;
     }
     .coming-soon {
       margin-top: 20px;
       font-size: 3em;
       letter-spacing: 2px;
+      animation: fadeInText 4s ease-in forwards;
+    }
+    @keyframes fadeInLogo {
+      0% { opacity: 0; }
+      100% { opacity: 0.55; }
+    }
+    @keyframes fadeInText {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <div class="content">
-    <img src="logo.jpg" alt="Logo">
-    <div class="coming-soon">COMING SOON</div>
-  </div>
+  <img class="logo" src="logo.jpg" alt="Logo">
+  <div class="coming-soon">COMING SOON</div>
 </body>
 </html>
